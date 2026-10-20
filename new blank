@@ -1,0 +1,18 @@
+CANVAS QUICKHACKS
+
+EDPUZZLE SPEEDUP
+1. play edpuzzle video
+2. in the edpuzzle window, right/double click OR f12
+3. locate console (at the bottom) and IF NECCISSARY type "allow pasting" into the next blank line
+4. on a new blank line, paste "speed = 2 // Change this to the speed (eg 2 for 2x speed)
+video = document.querySelector('video')
+Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'playbackRate').set.call(video, speed)
+Object.defineProperty(video, 'playbackRate', { writable: false })"
+    - personally, the maximum speed edpuzzle can handle without ticks breaking is "4"
+
+ACTIVITY POPUP
+1. in the assignment window, right/double click OR f12
+2. under the elements section (at the top) locate a line beginning with "<frame.." and hover over it to ensure it highlights the activity window
+3. locate under or within the "<iframe..." line blue text that says src="..." 
+4. double click the bright blue url withing the quotes following "src=" and copy it
+5. in a new tab, type "https://stpius.instructure.com/" then paste that url from the elements and enter
